@@ -10,7 +10,7 @@
 
 Disclaimer: The default wordlist is `/usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt` you can change this by going into the script on line 123 and changing the `wordlist = ` line.
 
-You can install the dependencies with the requirements.txt file: `pip install -r requirements.txt`
+You can install the dependencies with the requirements.txt file: `pip install -r requirements.txt` (you need `nmap` for option 2 to work)
 
 Note: You can implement ip spoofing for TCP Syn Flooding but this tool just spoofs the source port.
 
