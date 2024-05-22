@@ -1,29 +1,74 @@
-# netnuker
+🚀 netnuker
+---
+v1.1
 
-**v1.1**
+![image](https://github.com/mxntysec/netnuker/assets/166342298/fe41f33a-f628-4d7f-94aa-1bd8663ca781)
 
-![image](https://github.com/mxntysec/netnuker/assets/166342298/e45a7b10-23f1-4b94-9536-8ae90c0e08ef)
+netnuker is an all-in-one attack tool that performs TCP Syn Flood Attacks, Nmap scans, and Sub Directory Brute Forcing.
 
-`netnuker` is an all in-one attack tool which can do: `TCP Syn Flood Attacks, Nmap scans, Sub Directory Brute Forcing`
+netnuker leverages nmap and a custom tool named subdestroyer for comprehensive reconnaissance.
 
-`netnuker` uses `nmap` and a custom tool I wrote named `subdestroyer` for recon.
+![image](https://github.com/mxntysec/netnuker/assets/166342298/95166b4b-4497-4a48-98a0-34a5064fd5a8)
+---
+✨ Features
 
-![image](https://github.com/mxntysec/netnuker/assets/166342298/0c91a861-8c09-4773-9931-a180a9984651)
+    TCP Syn Flood Attack (DDoS)
+    Nmap Scans:
+        Standard scans with service/version detection.
+        Most popular 100 UDP ports scan.
+    Subdirectory Brute Forcing with subdestroyer.
 
-This tool can use `nmap` for the 100 most popular UDP ports in option 4
+📋 Prerequisites
+---
+Ensure you have the following installed:
 
-Disclaimer: The default sub directory wordlist is `/usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt` you can change this by going into the script on line 144 and changing the `wordlist = ` line.
+    nmap
+    Python 3
+---
+Install the dependencies via the requirements.txt file:
 
-![image](https://github.com/mxntysec/netnuker/assets/166342298/4a6c03fa-979b-40a2-b974-3802c6c99d6e)
+`pip install -r requirements.txt`
 
-You can install the dependencies with the requirements.txt file: `pip install -r requirements.txt` (you need `nmap` for option 2 to work)
+🔧 Installation
+---
+Clone this repository:
+---
+```
+git clone https://github.com/mxntysec/netnuker.git
+cd netnuker
+```
+---
+Install dependencies:
 
-Note: You can implement ip spoofing for TCP Syn Flooding but this tool just spoofs the source port.
+    `pip install -r requirements.txt`
+---
+🚀 Usage
 
+Run netnuker with the following command:
 
-# Testing:
-`This tool is still in testing so if it doesn't work or has bugs that's something to be fixed (I need to add more effiency to the TCP Syn Flood attack)`
+`python3 netnuker.py`
+---
+Available Options:
 
-# ETHICAL DISCLAIMER:
+    TCP Syn Flood Attack (DDoS)
+    Nmap Scan (-sC -sV -p- --open)
+    Subdirectory Scan (subdestroyer)
+    Nmap Scan for Most Popular UDP Ports
+---
+Note:
 
-**This tool is intended for educational purposes only and should only be used on networks and systems for which you have explicit permission to conduct security testing. Unauthorized use of this tool is illegal and unethical, and can result in severe legal consequences.**
+    The default subdirectory wordlist is located at /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt. You can change this by editing the script on line 144 and modifying the wordlist = line.
+
+⚠️ Disclaimer
+
+This tool is intended for educational purposes only and should only be used on networks and systems for which you have explicit permission to conduct security testing. Unauthorized use of this tool is illegal and unethical, and can result in severe legal consequences.
+---
+🧪 Testing
+
+This tool is still in testing. If it doesn't work or has bugs, improvements are in progress. Enhancements to the efficiency of the TCP Syn Flood attack are ongoing.
+---
+🛡️ Ethical Disclaimer
+---
+This tool is intended for educational purposes only and should only be used on networks and systems for which you have explicit permission to conduct security testing. Unauthorized use of this tool is illegal and unethical, and can result in severe legal consequences.
+
+Feel free to contribute to this project or raise any issues you encounter.
