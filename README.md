@@ -1,8 +1,12 @@
 # netnuker
 
+![image](https://github.com/mxntysec/netnuker/assets/166342298/eaec4916-bddb-4e1d-9701-579244132e1f)
+
 `netnuker` is an all in-one attack tool which can do: `TCP Syn Flood Attacks, Nmap scans, Sub Directory Brute Forcing`
 
 `netnuker` uses tools like `feroxbuster` and `nmap` for recon
+
+![image](https://github.com/mxntysec/netnuker/assets/166342298/b0c49377-d0ed-427f-86a0-935d9ce10dba)
 
 You can implement ip spoofing for TCP Syn Flooding but this tool just spoofs the source port.
 
