@@ -10,6 +10,6 @@
 
 You can implement ip spoofing for TCP Syn Flooding but this tool just spoofs the source port.
 
-ETHICAL DISCLAIMER:
+# ETHICAL DISCLAIMER:
 
-This tool is intended for educational purposes only and should only be used on networks and systems for which you have explicit permission to conduct security testing. Unauthorized use of this tool is illegal and unethical, and can result in severe legal consequences.
+**This tool is intended for educational purposes only and should only be used on networks and systems for which you have explicit permission to conduct security testing. Unauthorized use of this tool is illegal and unethical, and can result in severe legal consequences.**
