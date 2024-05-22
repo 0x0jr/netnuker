@@ -2,13 +2,13 @@
 
 **v1.1**
 
-<p align="center"><img src="https://github.com/mxntysec/netnuker/assets/166342298/fb04acd3-a48e-4c8b-b69d-099d2067752b)" width="800px" alt="netnuker"></p>
+<p align="center"><img src="https://github.com/mxntysec/netnuker/assets/166342298/fb04acd3-a48e-4c8b-b69d-099d2067752b)" width="500px" alt="netnuker"></p>
 
 ***netnuker is an all-in-one attack tool that performs TCP Syn Flood Attacks, Nmap scans, and Sub Directory Brute Forcing.***
 
 ***netnuker leverages nmap and a custom tool named subdestroyer for comprehensive reconnaissance.***
 
-<p align="center"><img src="https://github.com/mxntysec/netnuker/assets/166342298/95166b4b-4497-4a48-98a0-34a5064fd5a8" width="600px" alt="netnuker in action"></p>
+<p align="center"><img src="https://github.com/mxntysec/netnuker/assets/166342298/95166b4b-4497-4a48-98a0-34a5064fd5a8" width="400px" alt="netnuker in action"></p>
 
 ## ✨ Features
 
