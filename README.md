@@ -14,6 +14,9 @@ You can install the dependencies with the requirements.txt file: `pip install -r
 
 Note: You can implement ip spoofing for TCP Syn Flooding but this tool just spoofs the source port.
 
+# Testing:
+`This tool is still in testing so if it doesn't work or has bugs that's something to be fixed (I need to add more effiency to the TCP Syn Flood attack)`
+
 # ETHICAL DISCLAIMER:
 
 **This tool is intended for educational purposes only and should only be used on networks and systems for which you have explicit permission to conduct security testing. Unauthorized use of this tool is illegal and unethical, and can result in severe legal consequences.**
