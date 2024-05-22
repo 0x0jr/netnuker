@@ -6,11 +6,21 @@ import queue
 import requests
 import sys
 import os
+import socket
 from datetime import datetime
 import random
 from scapy.all import *
 import subprocess  # Make sure to import subprocess for the ping function
 import time  # Import time module for sleep and duration
+
+# Grab IP of current user
+
+def get_current_ip():
+    hostname = socket.gethostname()
+    current_ip = socket.gethostbyname(hostname)
+    return current_ip
+
+currentIP = get_current_ip()
 
 # Intro
 
@@ -24,11 +34,11 @@ intro = f"""{Fore.RED}
 /_/ /_/\___/\__/_/ /_/\__,_/_/|_|\___/_/     
 {Fore.MAGENTA}
   /\      {Fore.MAGENTA}>>> {Fore.LIGHTCYAN_EX}made by mxnty{Fore.MAGENTA} <<<
- /  \\     {Fore.MAGENTA}>>> {Fore.LIGHTCYAN_EX}version: 1.0{Fore.MAGENTA} <<<
+ /  \\     {Fore.MAGENTA}>>> {Fore.LIGHTCYAN_EX}version: 1.1{Fore.MAGENTA} <<<
  |  |     {Fore.MAGENTA}>>> {Fore.LIGHTCYAN_EX}time of start: {datetime.now()}{Fore.MAGENTA} <<<
  |  |     {Fore.MAGENTA}>>> {Fore.LIGHTCYAN_EX}time awake: too long{Fore.MAGENTA} <<<
 / == \\    {Fore.MAGENTA}>>> {Fore.LIGHTCYAN_EX}hacked: all the things{Fore.MAGENTA} <<<
-|/**\\|
+|/**\\|     {Fore.MAGENTA}>>> {Fore.LIGHTCYAN_EX}your ip: {currentIP}{Fore.MAGENTA} <<<
 {Fore.GREEN}++++++++++++++++++++++++++++++++++++++++++++
 """
 print(intro)
@@ -63,19 +73,26 @@ option = input(f"""{Fore.LIGHTYELLOW_EX}
 This tool is intended for educational purposes only and should only be used on networks and systems for which you have explicit permission to conduct security testing. Unauthorized use of this tool is illegal and unethical, and can result in severe legal consequences.
 {Fore.RED}      
 Attacks:
- ________________________________
-| 1. TCP Syn Flood Attack (DDoS) |
-|________________________________|
+  _______________________________
+ /                               |
+| 1. TCP Syn Flood Attack (DDoS)  |
+ \_______________________________/
                 
 {Fore.YELLOW}++++++++++++++++++++++++++++++++++
 {Fore.RED}
 Recon:
- ___________________________________
-| 2. Nmap Scan (-sC -sV -p- --open) |
-|___________________________________|
- _________________________________________
+  __________________________________
+ /                                  |
+| 2. Nmap Scan (-sC -sV -p- --open)  |
+ \__________________________________/
+  _______________________________________
+ /                                       |
 | 3. subdestroyer Scan For Subdirectories |
-|_________________________________________|
+ \_______________________________________/
+  _______________________________________
+ /                                       |
+| 4. Nmap Scan For Most Popular UDP Ports |
+ \_______________________________________/
 
 Your option: """)
 
@@ -217,6 +234,8 @@ elif option == '3':
     print(f"{Fore.YELLOW}[+] STATUS: Scan completed at {currentTime}")
 
     colorama.deinit()
+elif option == '4':
+    os.system(f"nmap -v -sU --top-ports 100 {target_ip}")
 else:
     print(f"{Fore.LIGHTRED_EX}[-] Invalid Option!")
     sys.exit()
