@@ -16,7 +16,7 @@
   - Most popular 100 UDP ports scan.
 - 🔎 **Subdirectory Brute Forcing** with subdestroyer.
 
-<p align="right"><img src="https://github.com/mxntysec/netnuker/assets/166342298/95166b4b-4497-4a48-98a0-34a5064fd5a8" width="250px" alt="netnuker in action"></p>
+<p align="center"><img src="https://github.com/mxntysec/netnuker/assets/166342298/95166b4b-4497-4a48-98a0-34a5064fd5a8" width="250px" alt="netnuker in action"></p>
 
 ## 📋 Prerequisites
 
