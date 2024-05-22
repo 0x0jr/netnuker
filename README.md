@@ -8,7 +8,7 @@
 
 ![image](https://github.com/mxntysec/netnuker/assets/166342298/33e6e383-45b2-4e0a-99ca-4fa9b263c315)
 
-Disclaimer: The default wordlist is `/usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt` you can change this by going into the script on line 127 and changing the `wordlist = ` line.
+Disclaimer: The default sub directory wordlist is `/usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt` you can change this by going into the script on line 127 and changing the `wordlist = ` line.
 
 You can install the dependencies with the requirements.txt file: `pip install -r requirements.txt` (you need `nmap` for option 2 to work)
 
