@@ -75,7 +75,7 @@ This tool is intended for educational purposes only and should only be used on n
 Attacks:
   _______________________________
  /                               |
-| 1. TCP Syn Flood Attack (DDoS)  |
+| 1. TCP Syn Flood Attack (DoS)   |
  \_______________________________/
                 
 {Fore.YELLOW}++++++++++++++++++++++++++++++++++
