@@ -12,7 +12,7 @@
 
 ## ✨ Features
 
-- 💥 **TCP Syn Flood Attack (DDoS)**
+- 💥 **TCP Syn Flood Attack (DoS)**
 - 🔍 **Nmap Scans**:
   - Standard scans with service/version detection.
   - Most popular 100 UDP ports scan.
