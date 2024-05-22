@@ -6,7 +6,7 @@
 
 `netnuker` uses `nmap` and a custom tool I wrote named `subdestroyer` for recon.
 
-![image](https://github.com/mxntysec/netnuker/assets/166342298/b0c49377-d0ed-427f-86a0-935d9ce10dba)
+![image](https://github.com/mxntysec/netnuker/assets/166342298/3ee6f174-0a6f-4e6f-aa63-d0364b71c90f)
 
 You can install the dependencies with the requirements.txt file: `pip install -r requirements.txt`
 
