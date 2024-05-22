@@ -8,7 +8,9 @@
 
 ![image](https://github.com/mxntysec/netnuker/assets/166342298/b0c49377-d0ed-427f-86a0-935d9ce10dba)
 
-You can implement ip spoofing for TCP Syn Flooding but this tool just spoofs the source port.
+You can install the dependencies with the requirements.txt file: `pip install -r requirements.txt`
+
+Note: You can implement ip spoofing for TCP Syn Flooding but this tool just spoofs the source port.
 
 # ETHICAL DISCLAIMER:
 
