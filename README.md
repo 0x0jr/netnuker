@@ -4,7 +4,7 @@
 
 `netnuker` is an all in-one attack tool which can do: `TCP Syn Flood Attacks, Nmap scans, Sub Directory Brute Forcing`
 
-`netnuker` uses tools like `feroxbuster` and `nmap` for recon
+`netnuker` uses `nmap` and a custom tool I wrote named `subdestroyer` for recon.
 
 ![image](https://github.com/mxntysec/netnuker/assets/166342298/b0c49377-d0ed-427f-86a0-935d9ce10dba)
 
