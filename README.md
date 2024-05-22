@@ -1,16 +1,14 @@
-Here is a refined and visually appealing version of your README.md for `netnuker`, with added emojis and better structure to make it look professional on GitHub:
-
 # 🚀 netnuker
 
 **v1.1**
 
-<p align="center"><img src="https://github.com/mxntysec/netnuker/assets/166342298/fe41f33a-f628-4d7f-94aa-1bd8663ca781" width="400px" height="150px" alt="netnuker"></p>
+<p align="center"><img src="https://github.com/mxntysec/netnuker/assets/166342298/fe41f33a-f628-4d7f-94aa-1bd8663ca781" width="400px" alt="netnuker"></p>
 
 ***netnuker is an all-in-one attack tool that performs TCP Syn Flood Attacks, Nmap scans, and Sub Directory Brute Forcing.***
 
 ***netnuker leverages nmap and a custom tool named subdestroyer for comprehensive reconnaissance.***
 
-<p align="center"><img src="https://github.com/mxntysec/netnuker/assets/166342298/95166b4b-4497-4a48-98a0-34a5064fd5a8" width="1078" height="433" alt="netnuker in action"></p>
+<p align="center"><img src="https://github.com/mxntysec/netnuker/assets/166342298/95166b4b-4497-4a48-98a0-34a5064fd5a8" width="600px" alt="netnuker in action"></p>
 
 ## ✨ Features
 
@@ -28,27 +26,27 @@ Ensure you have the following installed:
 - Python 3
 
 Install the dependencies via the `requirements.txt` file:
-```sh
+```
 pip install -r requirements.txt
 ```
 
 ## 🔧 Installation
 
 1. **Clone this repository**:
-   ```sh
+   ```
    git clone https://github.com/mxntysec/netnuker.git
    cd netnuker
    ```
 
 2. **Install dependencies**:
-   ```sh
+   ```
    pip install -r requirements.txt
    ```
 
 ## 🚀 Usage
 
 Run `netnuker` with the following command:
-```sh
+```
 python3 netnuker.py
 ```
 
@@ -80,7 +78,3 @@ The default subdirectory wordlist is located at `/usr/share/seclists/Discovery/W
 Feel free to contribute to this project or raise any issues you encounter.
 
 ---
-
-<p align="center"><img src="https://github.com/mxntysec/netnuker/assets/166342298/4a6c03fa-979b-40a2-b974-3802c6c99d6e" width="400px" height="150px" alt="footer"></p>
-
-This updated README should give a more professional appearance and make it easier for users to understand the purpose and usage of `netnuker`.
