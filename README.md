@@ -1,6 +1,4 @@
-# 🚀 netnuker
-
-**v1.2**
+# 🚀 netnuker v1.2
 
 <p align="center"><img src="https://github.com/mxntysec/netnuker/assets/166342298/4cdc54a2-ad99-4b14-a7d5-1bb89d8d7602" width="500px" alt="netnuker"></p> 
 
