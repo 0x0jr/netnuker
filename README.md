@@ -10,6 +10,13 @@
 
 ***You don't need to install subdestroyer!! it's built in, but you can find it here: https://github.com/mxntysec/subdestroyer***
 
+## 👨‍💻 Update Log! v1.2
+**Added:**
+  - Updated UI
+  - Fixed SYN Flood Errors
+  - Added New Slowloris HTTP Attack
+  - Added "Quit" Option
+
 ## ✨ Features
 
 - 💥 **TCP Syn Flood Attack (DoS)**
