@@ -53,13 +53,6 @@ Run `netnuker` with the following command:
 python3 netnuker.py
 ```
 
-### Available Options:
-
-1. **TCP Syn Flood Attack (DDoS)**
-2. **Nmap Scan (-sC -sV -p- --open)**
-3. **Subdirectory Scan (subdestroyer)**
-4. **Nmap Scan for Most Popular UDP Ports**
-
 ### Note:
 
 The default subdirectory wordlist is located at `/usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt`. You can change this by editing the script on line 144 and modifying the `wordlist =` line.
