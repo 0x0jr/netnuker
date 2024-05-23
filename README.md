@@ -8,18 +8,18 @@
 
 ***netnuker leverages nmap and a custom tool named subdestroyer for comprehensive reconnaissance.***
 
-***You don't need to instal subdestroyer!! it's built in, but you can find it here: https://github.com/mxntysec/subdestroyer***
+***You don't need to install subdestroyer!! it's built in, but you can find it here: https://github.com/mxntysec/subdestroyer***
 
 ## ✨ Features
 
 - 💥 **TCP Syn Flood Attack (DoS)**
-- 🔪 **Slowloris Attack (Effective)**
+- 🔪 **Slowloris Attack HTTP (Effective)**
 - 🔍 **Nmap Scans**:
   - Standard scans with service/version detection.
   - Most popular 100 UDP ports scan.
 - 🔎 **Subdirectory Brute Forcing** with subdestroyer.
 
-<p align="left"><img src="https://github.com/mxntysec/netnuker/assets/166342298/95166b4b-4497-4a48-98a0-34a5064fd5a8" width="250px" alt="netnuker in action"></p>
+<p align="left"><img src="https://github.com/mxntysec/netnuker/assets/166342298/c387419d-2008-4f02-b6ad-561bb10aa387" width="250px" alt="netnuker in action"></p>
 
 ## 📋 Prerequisites
 
@@ -75,6 +75,14 @@ The default subdirectory wordlist is located at `/usr/share/seclists/Discovery/W
 ## 🛡️ Ethical Disclaimer
 
 **This tool is intended for educational purposes only and should only be used on networks and systems for which you have explicit permission to conduct security testing. Unauthorized use of this tool is illegal and unethical, and can result in severe legal consequences.**
+
+## 👇 My Socials
+
+**Check out my medium page for HackTheBox writeups and TryHackMe writeups**
+https://medium.com/@mxnty
+
+**Here's my HackTheBox Account**
+https://app.hackthebox.com/users/429685
 
 ---
 
