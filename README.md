@@ -79,10 +79,10 @@ The default subdirectory wordlist is located at `/usr/share/seclists/Discovery/W
 ## 👇 My Socials
 
 **Check out my medium page for HackTheBox writeups and TryHackMe writeups**
-https://medium.com/@mxnty
+🔗 https://medium.com/@mxnty
 
 **Here's my HackTheBox Account**
-https://app.hackthebox.com/users/429685
+🔗 https://app.hackthebox.com/users/429685
 
 ---
 
