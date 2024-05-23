@@ -1,8 +1,10 @@
 # 🚀 netnuker
 
-**v1.1**
+**v1.2**
 
-<p align="center"><img src="https://github.com/mxntysec/netnuker/assets/166342298/fb04acd3-a48e-4c8b-b69d-099d2067752b)" width="500px" alt="netnuker"></p> 
+<p align="center"><img src="https://github.com/mxntysec/netnuker/assets/166342298/4cdc54a2-ad99-4b14-a7d5-1bb89d8d7602" width="500px" alt="netnuker"></p> 
+
+## 🗒️ Information
 
 ***netnuker is an all-in-one attack tool that performs TCP Syn Flood Attacks, Slowloris Attacks, Nmap scans, and Sub Directory Brute Forcing.***
 
