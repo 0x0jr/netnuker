@@ -10,6 +10,10 @@
 
 ***You don't need to install subdestroyer!! it's built in, but you can find it here: https://github.com/mxntysec/subdestroyer***
 
+***▶ PoC:***
+
+https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjA0eXRzcGkycDlhMTdxbm1xbWk5aGQ1dGZpYm0yN2pkcjVva3VuaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZlPbFZCzfOplEZiV5p/giphy.gif
+
 ## 👨‍💻 Update Log! v1.2
 **Added:**
   - 📱 Updated UI
